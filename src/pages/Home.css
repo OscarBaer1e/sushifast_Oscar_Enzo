@@ -1,0 +1,80 @@
+.home-background {
+  background-image: url('../assets/sushi-set-hot-rolls-avocado-california-salmon-rolls.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.home-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.home-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.gold-text {
+  color: #d4af37;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-gold {
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  padding: 12px 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.btn-gold:hover {
+  background-color: #b8962e;
+  color: #000;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-home {
+  animation: fadeSlideUp 1.2s ease-out forwards;
+}
+.cursor {
+  color: #d4af37;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

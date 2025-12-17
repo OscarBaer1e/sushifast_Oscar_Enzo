@@ -1,0 +1,29 @@
+.sushi-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.sushi-emoji {
+  position: absolute;
+  font-size: 40px;
+  animation: float 12s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) translateX(20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(-20px);
+    opacity: 1;
+  }
+}
